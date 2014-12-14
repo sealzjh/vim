@@ -1,9 +1,6 @@
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
-"不缩进
-:set nopaste
-
 "打开语法高亮
 syntax enable
 syntax on
@@ -57,12 +54,12 @@ set softtabstop=4
 " 将插入状态下的tab 更改为空格 简写 set et
 set expandtab
 
-map <F2> :NERDTreeToggle<CR>
-map <F3> <C-w>w
+map <C-e> :NERDTreeToggle<CR>
+"map <F3> <C-w>w
 "打开标签栏
-map <F4> :TagbarToggle<CR>
-map <F9> :bN<CR>
-map <F10> :bn<CR>
+"map <C-r> :TagbarToggle<CR>
+map <C-i> :bN<CR>
+map <C-o> :bn<CR>
 
 "在状态栏显示正在输入的命令
 set showcmd
@@ -92,27 +89,26 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
+" Bundle 'mattn/emmet-vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tomasr/molokai'
-"colorscheme molokai
+" Bundle 'tomasr/molokai'
 Bundle 'majutsushi/tagbar'
-Bundle "airblade/vim-gitgutter"
-Bundle "Yggdroot/indentLine"
+"Bundle "airblade/vim-gitgutter"
+"Bundle "Yggdroot/indentLine"
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'vim-scripts/AutoComplPop'
 "Set mapleader
 let mapleader = ","
 map <leader>il :IndentLinesToggle<CR>
-Bundle "tpope/vim-commentary"
+"Bundle "tpope/vim-commentary"
 
 "补全引号
-"Bundle "Raimondi/delimitMate"
+Bundle "Raimondi/delimitMate"
 
 "PowerLine插件 状态栏增强展示
 Bundle 'Lokaltog/vim-powerline'
@@ -125,16 +121,15 @@ set laststatus=2
 set t_Co=256
 let g:Powerline_colorscheme='solarized256'
 let g:Powerline_symbols='compatible'
-"let g:Powerline_symbols = 'fancy' "自定义格式
 let g:airline_powerline_fonts=1
 set encoding=utf-8
 
 
 
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+" Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
 
@@ -150,7 +145,6 @@ filetype plugin indent on     " required!
 "
 "设置Python注释字符
 autocmd FileType python,shell set commentstring=#\ %s
-"autocmd FileType php set commentstring=/* %s */
 autocmd FileType php,js set commentstring=//\ %s
 autocmd FileType phtml set commentstring=<!-- %s -->
 autocmd FileType mako set cms=##\ %s
@@ -160,6 +154,7 @@ let g:pydiction_menu_height = 20
 
 
 "配色方案
+"colo alan
 colo alan
 
 let Tlist_Inc_Winwidth = 1
@@ -174,3 +169,4 @@ filetype plugin on
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height = 3
 
+"set paste
